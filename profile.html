@@ -1,0 +1,203 @@
+<html>
+<head>
+<title> Homepage </title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" type="text/css" href="resource/css/style.css">
+
+<style> 
+.navbar a {
+    color: #D291BC;
+    font-size: 20;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+<a class="logo"> Amni's Nasir Site  </a>
+ <div class="header-right">
+ <a href= "index.html"> HOME </a> </li> 
+ <a href= "profile.html"> PROFILE </a> </li>
+ <a href= "family_members.html"> FAMILY </a> </li>
+ <a href= "education.html"> EDUCATION </a>  </li>
+ <a href= "movie.html"> MOVIE </a>  </li>
+ <a href= "song.html"> SONG </a> </li>
+ <a href= "contact.html"> CONTACT </a> </li>
+ </div>
+</div> 
+
+
+
+
+<div class="container">
+   <img src="resource/image/myself_2.jpeg"></p>
+   <div class="text">
+   </div>
+</div>
+
+<h2>About me</h2>
+<p><b> Name: NURAMNI NADHIRAH BINTI MOHD NASIR </p></b>
+<p><b> Age : 20 years old</p></b>
+<p> <b>Date of birthday : 11 December 2004 </p></b>
+<p><b> Height : 154 cm </p></b>
+<p> <b>Fear of : anything that relates with rats </b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="title">My Birthday Countdown:</div>
+  <div class="clock">
+    <div class="days">
+      <span id="days">00</span>
+      <p1>DAYS</p1>
+    </div>
+    <div class="hours">
+      <span id="hours">00</span>
+      <p1>HOURS</p1>
+    </div>
+    <div class="minutes">
+      <span id="minutes">00</span>
+      <p1>MINS</p1>
+    </div>
+    <div class="seconds">
+      <span id="seconds">00</span>
+      <p1>SECS</p1>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+const startstop =
+ document.getElementById("startstop");
+const seconds = 
+document.getElementById("seconds");
+const minutes = 
+document.getElementById("minutes");
+const hours = document.getElementById("hours");
+const days = document.getElementById("days");
+
+const today = new Date();
+const todayAt12 = new Date();
+todayAt12.setHours(0, 0, 0, 0);
+const birthdate = new Date("11/12/2004");
+let totalSeconds = 0;
+if (todayAt12.getTime() ===
+ birthdate.getTime()) {
+  totalSeconds = 0;
+} else {
+  birthdate.setFullYear(today.getFullYear() + 1);
+  totalSeconds = (birthdate - today) / 1000;
+}
+
+const setDisplay = (sec) => {
+  days.innerText = String(Math.floor(sec / (24 * 60 * 60))).padStart(2, "0");
+  sec = sec % (24 * 60 * 60);
+  hours.innerText = String(Math.floor(sec / (60 * 60))).padStart(2, "0");
+  sec = sec % (60 * 60);
+  minutes.innerText = String(Math.floor(sec / 60)).padStart(2, "0");
+  sec = sec % 60;
+  seconds.innerText = String(Math.floor(sec)).padStart(2, "0");
+};
+
+const timer = setInterval(() => {
+  if (totalSeconds <= 0) {
+    totalSeconds = 0;
+    clearInterval(timer);
+    return;
+  }
+  totalSeconds -= 1;
+  setDisplay(totalSeconds);
+}, 1000);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <!-- Content -->
+</header>
+
+<main>
+  <!-- Content -->
+</main>
+
+<footer class="footer">
+  <div class="footer__addr">
+<h1 class="footer__logo">Amni's Nasir</h1>
+        
+    
+    <a class="footer__btn" href="mailto:amninasir04@gmail.com">Contact</a>
+
+    <address>
+      013-9923066<br>
+          
+      <a class="footer__btn" href="mailto:amninasir04@gmail.com">Email Us</a>
+      <address> amninasir04@gmail.com
+      
+      <a class="footer__btn" href="linkto:amnies.__">Instagram</a>
+      <address> amniess.__
+
+      <a class="footer__btn" href="">Whatsapp</a>
+      <address> 
+
+
+  </div>
+  
+    <div class="legal__links">
+      <span>Hope you guys enjoy <span class="heart">♥</span> 
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>
